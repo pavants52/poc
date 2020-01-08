@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh 'mvn clean package'
-                sh 'docker build . -t miracle1'
+                sh 'sudo docker build . -t miracle1'
             }
         }
     }
