@@ -4,11 +4,11 @@ pipeline {
         stage('Build'){
             steps{
                 sh 'mvn clean package'
-                sh 'sudo docker build . -t miracle1'
-                sh 'sudo docker tag miracle1 sample1reg.azurecr.io/samples/miracle1'
-                sh 'az login -a https://portal.azure.com -u sduvvuri1@miraclesoft07.onmicrosoft.com -p Labsmiracle@123'
-                sh 'az acr login --name sample1reg'
-                sh 'sudo docker push sample1reg.azurecr.io/samples/miracle1'
+                sh 'sudo docker build . -t miraclepipeline'
+                sh 'sudo docker tag miraclepipeline sample1reg.azurecr.io/samples/miraclepipeline'
+                acrQuickTask azureCredentialsId: 'd7b2d974-44cc-4ac4-bec7-40e88ab7b036', gitPath: '', gitRefspec: '', gitRepo: '', imageNames: [[image: '']], registryName: 'sample1reg', resourceGroupName: 'devops', tarball: '', variant: ''
+                
+                sh 'sudo docker push sample1reg.azurecr.io/samples/miraclepipeline'
             }
         }
     }
