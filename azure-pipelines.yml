@@ -28,6 +28,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'Source_Code/pod.yml'
+    PathtoPublish: 'pod.yml'
     ArtifactName: 'drop'
     publishLocation: 'Container'
