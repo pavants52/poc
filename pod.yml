@@ -43,7 +43,7 @@ metadata:
 spec:
   containers:
   - name: sample  
-    image: sample1res/sample:1
+    image: sample1res/sample:latest
     imagePullPolicy: Always
     ports:
     - containerPort: 8080
