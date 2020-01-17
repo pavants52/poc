@@ -38,7 +38,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sampleapp
+  name: sample
   namespace: default
 spec:
   containers:
